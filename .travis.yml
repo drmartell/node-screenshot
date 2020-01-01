@@ -1,0 +1,5 @@
+language: node_js
+node_js: node
+# uncomment the 2 lines below to skip testing by Travis
+# script:
+# - echo "skipping tests"
