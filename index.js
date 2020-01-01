@@ -12,6 +12,6 @@ const
   await page.goto(url);
   try {
     await page.screenshot({ path });
-  } catch(err) { console.error(err); }
+  } catch(err) { console.error(err); } // eslint-disable-line no-console
   await browser.close();
 })();
