@@ -1,28 +1,9 @@
-require('dotenv').config();
-const replace = require('replace-in-file');
-const addToCompanies = require('../utils/add-to-companies');
+const timestamp = require('../utils/timestamp');
 
-describe('addToCompanies', () => {
-  it('should add a company name to companies.js object', () => {
-    const companyName = 'Acme Test Co Inc.';
-    addToCompanies(companyName);
-    const companies = require('../companies');
-    expect(companies[companyName]).toBeTruthy();
-    
-    // remove test data from file
-    try {
-      const results = replace.sync({
-        files: '../companies.js',
-        from: `'${ companyName }': true,\n`,
-        to: ''
-      });
-      console.log(results);
-    } catch(err) { console.error(err); }
+describe('timestamp', () => {
+  it('should return a timestamp string', () => {
+    const theTimestamp = timestamp();
+    expect(theTimestamp).toEqual(expect.any(String));
+    expect(theTimestamp.length).toEqual(19);
   });
 });
-
-// describe('getFjId', () => {
-//   it('should fetch a numeric Id in string form', () => {
-//     expect(getFjId().toEqual(expect.any(String)));
-//   });
-// });

@@ -1,13 +1,13 @@
 {
-  "name": ".",
+  "name": "node-screenshot",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --verbose --runInBand",
     "test:watch": "npm run test -- --watch",
-    "start": "node server.js",
-    "start:watch": "nodemon server.js"
+    "start": "node index.js",
+    "start:watch": "nodemon index.js"
   },
   "jest": {
     "testEnvironment": "node"
