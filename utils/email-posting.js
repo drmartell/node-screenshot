@@ -20,6 +20,10 @@ const emailPosting = async(emailInfo) => {
     auth: {
       user,
       pass
+    },
+    tls: { 
+        rejectUnauthorized: false 
+    }
     }
   });
 
