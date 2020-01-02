@@ -1,6 +1,7 @@
 console.log('running index.js');
   
 require('dotenv').config();
+console.log(process.env.SCREENSHOT_DIR);
 
 const
   emailPosting = require('./utils/email-posting'),
