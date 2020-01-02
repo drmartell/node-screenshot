@@ -22,8 +22,7 @@ const emailPosting = async(emailInfo) => {
       pass
     },
     tls: { 
-        rejectUnauthorized: false 
-    }
+      rejectUnauthorized: false 
     }
   });
 
