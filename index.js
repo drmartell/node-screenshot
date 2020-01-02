@@ -1,3 +1,5 @@
+console.log('running index.js');
+  
 require('dotenv').config();
 
 const
