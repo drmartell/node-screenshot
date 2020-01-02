@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=$ 
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=$(pwd)/public_html/node-screenshot/
+    # copy everything except dot files and folders
+    - rsync -av --exclude=".*" $(pwd)/. $DEPLOYPATH
+    # recursively copy everything, including dot files and folders, usually not a good idea
+    # - /bin/cp -R * $DEPLOYPATH
